@@ -1,0 +1,44 @@
+<h1>Sign Up - ClubEvents</h1>
+
+<% if @user.errors.any? %>
+  <div class="alert alert-danger">
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with model: @user, url: signup_path, local: true do |f| %>
+  <div>
+    <%= f.label :name, "Full Name" %><br>
+    <%= f.text_field :name, required: true, autofocus: true %>
+  </div>
+
+  <div>
+    <%= f.label :email, "Email" %><br>
+    <%= f.email_field :email, required: true %>
+  </div>
+
+  <div>
+    <%= f.label :role, "Role" %><br>
+    <%= f.select :role, [["Student", "student"], ["Admin", "admin"]], selected: (@user.role || "student") %>
+  </div>
+
+  <div>
+    <%= f.label :password, "Password (min 6 characters)" %><br>
+    <%= f.password_field :password, required: true %>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation, "Confirm Password" %><br>
+    <%= f.password_field :password_confirmation, required: true %>
+  </div>
+
+  <div>
+    <%= f.submit "Create Account" %>
+  </div>
+<% end %>
+
+<p>Already have an account? <%= link_to "Log In", login_path %></p>
