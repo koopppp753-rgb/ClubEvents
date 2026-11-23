@@ -1,0 +1,16 @@
+# Sprint 1 Retrospective - ClubEvents
+
+## What Went Well
+- Clear Sprint 1 backlog items, acceptance criteria, and story points.
+- Active use of branches, Pull Requests, and peer reviews on GitHub.
+- Clear core scope covering roles, event CRUD, registration, attendance lists, and AJAX updates.
+
+## What Could Be Improved
+- Faster review and merge turnaround for open Pull Requests.
+- Clearer distinction between documentation changes and code repository checks.
+- Keeping sprint and report notes updated continuously.
+
+## Action Items for Future Sprints
+- Complete at least two peer reviews per team member consistently.
+- Share new Pull Request links immediately with the team for faster review and merge into `main`.
+- Keep sprint notes, client changes, and retrospective items updated for the final 3-5 page report.
